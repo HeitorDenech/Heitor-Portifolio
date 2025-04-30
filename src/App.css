@@ -1,0 +1,214 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ---------CONTAINER-PRINCIPAL---------- */
+
+.container-principal {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+
+/* --------CONTAINER-NAVBAR-------------- */
+
+.navbar {
+  height: 100vh;
+  width: 5vw;
+  position: sticky;
+  top: 0;
+  background-color: black;
+}
+
+.navbar-icons {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.navbar-icons i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5vh;
+  width: 2.5vw;
+  font-size: 26px;
+  color: black;
+  background-color: white;
+  border-radius: 50px;
+  transition: all .55s ease-in-out;
+  box-shadow: 0px 3px 12px white;
+}
+
+.navbar-icons i:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #3B3B3B;
+  box-shadow: none;
+}
+
+/* ----------CONTAINER-MAIN-------------- */
+
+.container-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  background-color: #3B3B3B;
+}
+
+/* ------------INTRODUCAO-HEITOR--------- */
+
+.introducao-heitor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2vh;
+  height: 90vh;
+  width: 98%;
+  background-color: white;
+  border-radius: 20px 20px 0px 0px;
+}
+
+/* ---------INTRODUCAO-HEITOR-TEXTO---------- */
+
+.texto-introducao {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.texto-introducao h1 {
+  margin-left: 20vh;
+  font-size: 70px;
+  font-weight: normal;
+  color: #E21A41;
+}
+
+.texto-introducao p {
+  margin-left: 20vh;
+  font-size: 24px;
+  width: 55%;
+}
+
+.texto-introducao button {
+  margin-left: 20vh;
+}
+
+/* ------------INTRODUCAO-HEITOR-IMG--------- */
+
+.img-introducao {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-introducao img {
+  height: 65%;
+  width: 65%;
+}
+
+
+/* ---------HARD-SKILLS-CONTAINER-PRINCIPAL--------- */
+
+.hard-skills-container-principal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  width: 98%;
+  background-color: #272727;
+}
+
+/* -----------IMG-HARD-SKILLS------------------ */
+
+.img-hard-skills {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-hard-skills img {
+  height: 70%;
+  width: 65%;
+  box-shadow: 0px 3px 12px white;
+  border-radius: 140px 40px 140px 40px;
+  position: relative;
+  animation: flutuar 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar {
+  0% {
+    top: 0px;
+  }
+  100%{
+    top: 15px;
+  }
+}
+
+/* ----------ICONS-HARD-SKILLS----------------- */
+
+.icons-hard-skills {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* -------ICONS-HARD-SKILLS-H1------------------- */
+
+.icons-hard-skills h1 {
+  font-size: 75px;
+  font-weight: normal;
+  color: white;
+}
+
+/* ----------ICONS-CONTAINER-PRINCIPAL--------------- */
+
+.icons-container-principal {
+  margin-top: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.icons-container-principal i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 16vh;
+  width: 11vw;
+  font-size: 80px;
+  color: black;
+  background-color: white;
+  border-radius: 20px;
+  transition: all .55s ease-in-out;
+  box-shadow: 0px 3px 12px white;
+}
+
+.icons-container-principal i:hover {
+  color: white;
+  background-color: #3B3B3B;
+  box-shadow: none;
+}
+
+
