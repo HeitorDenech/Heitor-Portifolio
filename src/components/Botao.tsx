@@ -7,10 +7,12 @@ type BotaoProps = {
 
 const Botao: React.FunctionComponent<BotaoProps> = ({ texto }) => {
   return (
-    <button className="botao-projetos">
+    <button className="botao-projetos-branco">
       {texto}
     </button>
+    
   );
 };
+
 
 export default Botao;

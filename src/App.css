@@ -5,6 +5,22 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* --------------KEYFRAMES------------------ */
+
+@keyframes flutuar {
+  0% {
+    top: 0px;
+  }
+  100%{
+    top: 20px;
+  }
+}
+
 /* ---------CONTAINER-PRINCIPAL---------- */
 
 .container-principal {
@@ -41,7 +57,7 @@ body {
   font-size: 26px;
   color: black;
   background-color: white;
-  border-radius: 50px;
+  border-radius: 50vh;
   transition: all .55s ease-in-out;
   box-shadow: 0px 3px 12px white;
 }
@@ -71,7 +87,7 @@ body {
   align-items: center;
   justify-content: center;
   margin-top: 2vh;
-  height: 90vh;
+  height: 70vh;
   width: 98%;
   background-color: white;
   border-radius: 20px 20px 0px 0px;
@@ -90,22 +106,24 @@ body {
 
 .texto-introducao h1 {
   margin-left: 20vh;
-  font-size: 70px;
+  font-size: 80px;
   font-weight: normal;
   color: #E21A41;
 }
 
 .texto-introducao p {
   margin-left: 20vh;
-  font-size: 24px;
-  width: 55%;
+  font-size: 26px;
+  width: 70%;
 }
 
 .texto-introducao button {
   margin-left: 20vh;
 }
 
+
 /* ------------INTRODUCAO-HEITOR-IMG--------- */
+
 
 .img-introducao {
   height: 100%;
@@ -116,8 +134,10 @@ body {
 }
 
 .img-introducao img {
-  height: 65%;
+  height: 80%;
   width: 65%;
+  position: relative;
+  animation: flutuar 1.2s ease-in-out infinite alternate;
 }
 
 
@@ -148,16 +168,6 @@ body {
   box-shadow: 0px 3px 12px white;
   border-radius: 140px 40px 140px 40px;
   position: relative;
-  animation: flutuar 1.5s ease-in-out infinite alternate;
-}
-
-@keyframes flutuar {
-  0% {
-    top: 0px;
-  }
-  100%{
-    top: 15px;
-  }
 }
 
 /* ----------ICONS-HARD-SKILLS----------------- */
@@ -182,7 +192,7 @@ body {
 /* ----------ICONS-CONTAINER-PRINCIPAL--------------- */
 
 .icons-container-principal {
-  margin-top: 1vh;
+  /* margin-top: 1vh; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -212,3 +222,237 @@ body {
 }
 
 
+/* ---------------PROJETOS------------------ */
+
+
+.projetos{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 98%;
+  background-color: white;
+}
+
+.projetos h1{
+  margin-top: 1vh;
+  font-size: 75px;
+  font-weight: normal;
+  color: #E21A41;
+}
+
+
+/* --------------PROJETOS-CONTAINER-------------- */
+
+.projetos-container{
+  margin-top: 5vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* ----------------MEUS-PROJETOS-------------- */
+
+
+.meus-projetos{
+  height: 50vh;
+  width: 80%;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-bottom: 2vh;
+  border-radius: 20px;
+  box-shadow: 0px 2px 10px black;
+}
+
+
+/* --------------IMG-PROJETOS-CONTAINER-------------- */
+
+
+.img-projetos-container{
+  height: 100%;
+  width: 50%;
+}
+
+.img-projetos-container img{
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  transition: all .55s ease-in-out;
+}
+
+.img-projetos-container img:hover{
+  /* cursor: pointer; */
+  filter: brightness(50%);
+}
+
+/* --------------TEXT-PROJETOS-CONTAINER---------------- */
+
+
+.text-projetos-container{
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.text-projetos-container h1{
+  margin-left: 6vh;
+  font-size: 60px;
+  font-weight: normal;
+  color: #E21A41;
+}
+
+.text-projetos-container p{
+  margin-left: 6vh;
+  font-size: 24px;
+  width: 80%;
+}
+
+.text-projetos-container button{
+  margin-left: 6vh;  
+}
+
+
+/* --------------------CARROSEL-CONTAINER--------------------- */
+
+
+.carrosel-container{
+  background-color: white;
+  height: 80vh;
+  width: 98%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+ /* -----------------CARROSEL------------------ */
+
+ .carrosel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px auto;
+  width: 70vw;
+  height: 70vh;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 1px solid black;
+}
+
+.slides {
+  width: 70vw;
+  height: 70vh;
+  display: flex;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 100%;
+  position: relative;
+  transition: 2s;
+}
+
+.slide img {
+  width: 70vw;
+  position: relative;
+  /* animation: efeito-flutuante 2.7s ease-in-out infinite alternate; */
+}
+/* 
+@keyframes efeito-flutuante {
+  0% {
+      top: 0;
+  }
+
+  100% {
+      top: -30px;
+  }
+} */
+
+.navegacao-manual {
+  position: absolute;
+  width: 70vw;
+  margin-top: 61.5vh;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-botao {
+  border: 2px solid white;
+  padding: 7px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+  border: 1px solid black;
+}
+
+.manual-botao:not(:last-child) {
+  margin-right: 40px;
+}
+
+.manual-botao:hover {
+  background-color: black;
+}
+
+#radio1:checked~.first {
+  margin-left: 0;
+}
+
+#radio2:checked~.first {
+  margin-left: -100%;
+}
+
+#radio3:checked~.first {
+  margin-left: -200%;
+}
+
+#radio4:checked~.first {
+  margin-left: -300%;
+}
+
+/* .navegacao-botao div {
+  border: 2px solid #22a7ff;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+} */
+
+.navegacao-botao {
+  position: absolute;
+  width: 70vw;
+  margin-top: 65vh;
+  display: flex;
+  justify-content: center;
+}
+
+.navegacao-botao div:not(:last-child) {
+  margin-right: 40px;
+}
+
+#radio1:checked~.navegacao-botao .botao-1 {
+  background-color: white;
+}
+
+#radio2:checked~.navegacao-botao .botao-2 {
+  background-color: white;
+}
+
+#radio3:checked~.navegacao-botao .botao-3 {
+  background-color: white;
+}
+
+#radio4:checked~.navegacao-botao .botao-4 {
+  background-color: white;
+}
+
+/* ----------------/CARROSSEL--------------- */
