@@ -7,23 +7,36 @@ import { useEffect } from 'react';
 
 // ------------------IMAGENS----------------------
 import imgHardSkills from './assets/imgHardSkills.png';
+
 import imgIntroducaoProgramador from './assets/imgIntroducaoProgramador.avif';
+
 import imgGeodiverso1 from './assets/imgGeodiverso1.jpg';
 import imgGeodiverso2 from './assets/imgGeodiverso2.jpg';
 import imgGeodiverso3 from './assets/imgGeodiverso3.jpg';
+
+import suberLogo from './assets/suberLogo.png';
 import imgSuber1 from './assets/imgSuber1.jpg';
 import imgSuber2 from './assets/imgSuber2.jpg';
 import imgSuber3 from './assets/imgSuber3.jpg';
+
+import cocaLogo from './assets/cocaLogo.svg';
 import imgCoca1 from './assets/imgCoca1.jpg';
 import imgCoca2 from './assets/imgCoca2.jpg';
 import imgCoca3 from './assets/imgCoca3.jpg';
 import imgCoca4 from './assets/imgCoca4.jpg';
 import imgCoca5 from './assets/imgCoca5.jpg';
+
+import calculadoraLogo from './assets/calculadoraLogo.jpg';
 import imgCalculadora from './assets/imgCalculadora.jpg';
+
 import imgTempo1 from './assets/imgTempo1.jpg';
+import imgTempo2 from './assets/imgTempo2.jpg';
+import imgTempo3 from './assets/imgTempo3.jpg';
+import imgTempo4 from './assets/imgTempo4.jpg';
 
 function App() {
 
+  // AOS ANIMATION 
   useEffect(() => {
     AOS.init({
       duration: 700,
@@ -31,10 +44,12 @@ function App() {
     });
   }, []);
 
+  // CARROSSEL 
   useEffect(() => {
     let contadorGeo = 1;
     let contadorSuber = 1;
     let contadorCoca = 1;
+    let contadorTempo = 1;
 
     const intervaloGeo = setInterval(() => {
       contadorGeo = contadorGeo >= 3 ? 1 : contadorGeo + 1;
@@ -60,16 +75,23 @@ function App() {
       }
     }, 3500);
 
+    const intervaloTempo = setInterval(() => {
+      contadorTempo = contadorTempo >= 4 ? 1 : contadorTempo + 1;
+      const radioTempo = document.getElementById(`radio${contadorTempo}-tempo`);
+      if (radioTempo instanceof HTMLInputElement) {
+        radioTempo.checked = true;
+      }
+    }, 3500);
+
     return () => {
       clearInterval(intervaloGeo);
       clearInterval(intervaloSuber);
       clearInterval(intervaloCoca)
+      clearInterval(intervaloTempo)
     };
   }, []);
 
-
-
-
+  // ACCORDION 
   useEffect(() => {
     const contents = document.querySelectorAll('.content');
 
@@ -107,16 +129,28 @@ function App() {
 
       <section className='container-principal'>
 
+        {/* ---------------------------------NAVBAR---------------------------- */}
+
         <section className='navbar'>
 
           <div className='navbar-icons'>
-            <i className="bi bi-instagram"></i>
-            <i className="bi bi-github"></i>
-            <i className="bi bi-linkedin"></i>
-            <i className="bi bi-whatsapp"></i>
+            <a href="https://www.instagram.com/heitorx.denech/?next=%2F">
+              <i className="bi bi-instagram"></i>
+            </a>
+            <a href="https://github.com/HeitorDenech">
+              <i className="bi bi-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/heitor-de-albuquerque-denech-5a4669239/">
+              <i className="bi bi-linkedin"></i>
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=5551996994595">
+              <i className="bi bi-whatsapp"></i>
+            </a>
           </div>
 
         </section>
+
+        {/* -------------------------CONTAINER-MAIN------------------------------ */}
 
         <section className='container-main'>
 
@@ -131,8 +165,10 @@ function App() {
               </h1>
 
               <p data-aos="fade-right" data-aos-once="true">
-                Tenho 18 anos, comecei a programar em 2023, e acabei me apegando muito ao front-end e ao desing web, utilizando
-                ferramentas como o Figma. Sou dedicado, comunicativo e sempre busco aprender mais.
+                Tenho 18 anos, comecei a programar em 2022, no Senac São Leopoldo. No início das aulas, era só python e aulas de
+                lógica, mas após alguns meses de aula, foi introduzido o HTML, CSS e JS, e acabei me apegando muito a esses
+                conhecimentos e ao desing web, utilizando ferramentas como o Figma. Sou dedicado,
+                comunicativo e sempre busco aprender mais.
               </p>
 
               <div data-aos="fade-right" data-aos-once="true">
@@ -153,6 +189,13 @@ function App() {
 
           </section>
 
+          {/* ----------------------------SCROLL-DOWN----------------------------- */}
+
+
+          <section className='scroll-down'>
+            <p data-aos="fade-up" data-aos-once="true">scroll down <i className="bi bi-arrow-down"></i></p>
+          </section>
+
 
           {/* --------------------------------HARD-SKILLS---------------------------------- */}
 
@@ -165,7 +208,9 @@ function App() {
 
             <div className='icons-hard-skills' data-aos="fade-up" data-aos-once="true">
 
-              <h1>Hard Skills</h1>
+              <div className='icons-hard-skills-h1-celular'>
+                <h1>Hard Skills</h1>
+              </div>
 
               <div className='icons-container-principal'>
 
@@ -175,7 +220,7 @@ function App() {
                 <i data-aos="fade-up" data-aos-once="true" className="devicon-javascript-plain colored" title="JavaScript"></i>
                 <i data-aos="fade-up" data-aos-once="true" className="devicon-figma-plain colored" title="Figma"></i>
                 <i data-aos="fade-up" data-aos-once="true" className="devicon-github-original colored" title="GitHub"></i>
-                <i data-aos="fade-up" data-aos-once="true" className="devicon-java-plain colored" title="Java"></i>
+                <i data-aos="fade-up" data-aos-once="true" className="devicon-typescript-plain colored" title="TypeScript"></i>
 
               </div>
 
@@ -203,7 +248,7 @@ function App() {
 
                   <div className="content">
                     <div className="question">
-                      <i className="bi bi-person-workspace"></i>
+                      {/* <i className="bi bi-person-workspace"></i> */}
                       <h3>Geodiverso</h3>
 
                       <svg width="15" height="10" viewBox="0 0 42 25">
@@ -227,15 +272,21 @@ function App() {
                             <input type="radio" name="radio-botao" id="radio3" />
 
                             <div className="slide first">
-                              <img src={imgGeodiverso1} alt="imagem 1" />
+                              <a href="https://github.com/HeitorDenech/Geodiverso-2024">
+                                <img src={imgGeodiverso1} alt="imagem 1" />
+                              </a>
                             </div>
 
                             <div className="slide">
-                              <img src={imgGeodiverso2} alt="imagem 2" />
+                              <a href="https://github.com/HeitorDenech/Geodiverso-2024">
+                                <img src={imgGeodiverso2} alt="imagem 1" />
+                              </a>
                             </div>
 
                             <div className="slide">
-                              <img src={imgGeodiverso3} alt="imagem 3" />
+                              <a href="https://github.com/HeitorDenech/Geodiverso-2024">
+                                <img src={imgGeodiverso3} alt="imagem 1" />
+                              </a>
                             </div>
 
                             <div className="navegacao-botao">
@@ -257,9 +308,22 @@ function App() {
                         <h1>Geodiverso</h1>
 
                         <p>Geodiverso é um site voltado a ensinar os conteúdos de Geografia do Ensino Médio,
-                          desenvolvido em 2024 no Senac RS.</p>
+                          desenvolvido em 2024 no Senac RS. <span>Linguagens usadas:</span></p>
 
-                        <a href="">
+                        <div className='text-projetos-container-icons'>
+
+                          <i className="devicon-html5-plain colored" title="HTML5"></i>
+                          <i className="devicon-css3-plain colored" title="CSS3"></i>
+                          <i className="devicon-javascript-plain colored" title="JavaScript"></i>
+                          <i className="devicon-figma-plain colored" title="Figma"></i>
+                          <i className="devicon-github-original colored" title="GitHub"></i>
+                          <i className="devicon-mysql-plain colored" title="MySQL"></i>
+                          <i className="devicon-express-original" title="Express"></i>
+                          <i className="devicon-nodejs-plain colored" title="Node.js"></i>
+
+                        </div>
+
+                        <a href="https://github.com/HeitorDenech/Geodiverso-2024">
 
                           <Botao texto="Ver mais" />
 
@@ -275,7 +339,7 @@ function App() {
 
                   <div className="content">
                     <div className="question">
-                      <i className="bi bi-person-workspace"></i>
+                      {/* <img src={suberLogo} alt="" srcSet="" /> */}
                       <h3>Suber</h3>
                       <svg width="15" height="10" viewBox="0 0 42 25">
                         <path
@@ -301,15 +365,21 @@ function App() {
                             <input type="radio" name="radio-botao-suber" id="radio3-suber" />
 
                             <div className="slide first-suber">
-                              <img src={imgSuber1} alt="imagem 1" />
+                              <a href="https://github.com/HeitorDenech/ApiSuber">
+                                <img src={imgSuber1} alt="imagem 1" />
+                              </a>
                             </div>
 
                             <div className="slide">
-                              <img src={imgSuber2} alt="imagem 2" />
+                              <a href="https://github.com/HeitorDenech/ApiSuber">
+                                <img src={imgSuber2} alt="imagem 1" />
+                              </a>
                             </div>
 
                             <div className="slide">
-                              <img src={imgSuber3} alt="imagem 2" />
+                              <a href="https://github.com/HeitorDenech/ApiSuber">
+                                <img src={imgSuber3} alt="imagem 1" />
+                              </a>
                             </div>
 
                             <div className="navegacao-botao">
@@ -330,9 +400,22 @@ function App() {
 
                         <p>Suber é um site desenvolvido em dupla, no SENAC, em 2024, eu fiz a parte para notebook, e
                           minha dupla para celular. O objetivo do projeto era fazer uma landing page, com um dos
-                          temas que tinham de opção, no nosso caso foi o suber.</p>
+                          temas que tinham de opção, no nosso caso foi o suber. <span>Linguagens usadas:</span></p>
 
-                        <a href="">
+                        <div className='text-projetos-container-icons'>
+
+                          <i className="devicon-html5-plain colored" title="HTML5"></i>
+                          <i className="devicon-css3-plain colored" title="CSS3"></i>
+                          <i className="devicon-javascript-plain colored" title="JavaScript"></i>
+                          <i className="devicon-figma-plain colored" title="Figma"></i>
+                          <i className="devicon-github-original colored" title="GitHub"></i>
+                          <i className="devicon-mysql-plain colored" title="MySQL"></i>
+                          <i className="devicon-express-original" title="Express"></i>
+                          <i className="devicon-nodejs-plain colored" title="Node.js"></i>
+
+                        </div>
+
+                        <a href="https://github.com/HeitorDenech/ApiSuber">
 
                           <Botao texto="Ver mais" />
 
@@ -348,7 +431,7 @@ function App() {
 
                   <div className="content">
                     <div className="question">
-                      <i className="bi bi-person-workspace"></i>
+                      {/* <img id="cocaImg" src={cocaLogo} alt="" srcSet='' /> */}
                       <h3>Coca-Cola</h3>
                       <svg width="15" height="10" viewBox="0 0 42 25">
                         <path
@@ -375,23 +458,33 @@ function App() {
                             <input type="radio" name="radio-botao-coca" id="radio5-coca" />
 
                             <div className="slide first-coca">
-                              <img src={imgCoca1} alt="imagem 1" />
+                              <a href="https://github.com/HeitorDenech/CocaCola-landingPage">
+                                <img src={imgCoca1} alt="imagem 1" />
+                              </a>
                             </div>
 
                             <div className="slide">
-                              <img src={imgCoca2} alt="imagem 2" />
+                              <a href="https://github.com/HeitorDenech/CocaCola-landingPage">
+                                <img src={imgCoca1} alt="imagem 1" />
+                              </a>
                             </div>
 
                             <div className="slide">
-                              <img src={imgCoca3} alt="imagem 2" />
+                              <a href="https://github.com/HeitorDenech/CocaCola-landingPage">
+                                <img src={imgCoca1} alt="imagem 1" />
+                              </a>
                             </div>
 
                             <div className="slide">
-                              <img src={imgCoca4} alt="imagem 2" />
+                              <a href="https://github.com/HeitorDenech/CocaCola-landingPage">
+                                <img src={imgCoca1} alt="imagem 1" />
+                              </a>
                             </div>
 
                             <div className="slide">
-                              <img src={imgCoca5} alt="imagem 2" />
+                              <a href="https://github.com/HeitorDenech/CocaCola-landingPage">
+                                <img src={imgCoca1} alt="imagem 1" />
+                              </a>
                             </div>
 
                             <div className="navegacao-botao">
@@ -414,9 +507,17 @@ function App() {
 
                         <p>Foi um site que eu fiz apenas para testar minhas habilidades de CC adquiridas, me inspirei no site da Coca-Cola, a ideia era
                           fazer o mais parecido com o site original sem inspecionar a página, ou seja, apenas com o conhecimento que eu já possuo.
-                          O site foi desenvolvido em 2025</p>
+                          O site foi desenvolvido em 2025. <span>Linguagens usadas:</span></p>
 
-                        <a href="">
+                        <div className='text-projetos-container-icons'>
+
+                          <i className="devicon-html5-plain colored" title="HTML5"></i>
+                          <i className="devicon-css3-plain colored" title="CSS3"></i>
+                          <i className="devicon-javascript-plain colored" title="JavaScript"></i>
+
+                        </div>
+
+                        <a href="https://github.com/HeitorDenech/CocaCola-landingPage">
 
                           <Botao texto="Ver mais" />
 
@@ -432,7 +533,7 @@ function App() {
 
                   <div className="content">
                     <div className="question">
-                      <i className="bi bi-person-workspace"></i>
+                      {/* <img id="calculadoraImg" src={calculadoraLogo} alt="" /> */}
                       <h3>Calculadora</h3>
                       <svg width="15" height="10" viewBox="0 0 42 25">
                         <path
@@ -455,7 +556,9 @@ function App() {
                             <input type="radio" name="radio-botao-calculadora" id="radio1-calculadora" />
 
                             <div className="slide first-calculadora">
-                              <img src={imgCalculadora} alt="imagem 1" />
+                              <a href="https://github.com/HeitorDenech/CalculadoraAges">
+                                <img src={imgCalculadora} alt="imagem 1" />
+                              </a>
                             </div>
 
                             <div className="navegacao-botao">
@@ -474,9 +577,18 @@ function App() {
 
                         <h1>Calculadora</h1>
 
-                        <p>Nesse projeto eu fiz uma calculadora simples, usando HTML, CSS e JS. A calculadora foi desenvolvida em 2025, na AGES.</p>
+                        <p>Nesse projeto eu fiz uma calculadora simples, usando HTML, CSS e JS. A calculadora foi
+                          desenvolvida em 2025, na AGES. <span>Linguagens usadas:</span></p>
 
-                        <a href="">
+                        <div className='text-projetos-container-icons'>
+
+                          <i className="devicon-html5-plain colored" title="HTML5"></i>
+                          <i className="devicon-css3-plain colored" title="CSS3"></i>
+                          <i className="devicon-javascript-plain colored" title="JavaScript"></i>
+
+                        </div>
+
+                        <a href="https://github.com/HeitorDenech/CalculadoraAges">
 
                           <Botao texto="Ver mais" />
 
@@ -492,7 +604,7 @@ function App() {
 
                   <div className="content">
                     <div className="question">
-                      <i className="bi bi-person-workspace"></i>
+                      {/* <i className="bi bi-person-workspace"></i> */}
                       <h3>Previsão do tempo</h3>
                       <svg width="15" height="10" viewBox="0 0 42 25">
                         <path
@@ -512,13 +624,34 @@ function App() {
 
                         <div className="carrosel">
                           <div className="slides">
-                            <input type="radio" name="radio-botao-calculadora" id="radio1-calculadora" />
-                            <input type="radio" name="radio-botao-calculadora" id="radio2-calculadora" />
-                            <input type="radio" name="radio-botao-calculadora" id="radio3-calculadora" />
-                            <input type="radio" name="radio-botao-calculadora" id="radio4-calculadora" />
+                            <input type="radio" name="radio-botao-tempo" id="radio1-tempo" />
+                            <input type="radio" name="radio-botao-tempo" id="radio2-tempo" />
+                            <input type="radio" name="radio-botao-tempo" id="radio3-tempo" />
+                            <input type="radio" name="radio-botao-tempo" id="radio4-tempo" />
 
-                            <div className="slide first-calculadora">
-                              <img src={imgTempo1} alt="imagem 1" />
+
+                            <div className="slide first-tempo">
+                              <a href="https://github.com/HeitorDenech/Sprint2-Ages">
+                                <img src={imgTempo1} alt="imagem 1" />
+                              </a>
+                            </div>
+
+                            <div className="slide">
+                              <a href="https://github.com/HeitorDenech/Sprint2-Ages">
+                                <img src={imgTempo1} alt="imagem 1" />
+                              </a>
+                            </div>
+
+                            <div className="slide">
+                              <a href="https://github.com/HeitorDenech/Sprint2-Ages">
+                                <img src={imgTempo1} alt="imagem 1" />
+                              </a>
+                            </div>
+
+                            <div className="slide">
+                              <a href="https://github.com/HeitorDenech/Sprint2-Ages">
+                                <img src={imgTempo1} alt="imagem 1" />
+                              </a>
                             </div>
 
                             <div className="navegacao-botao">
@@ -538,10 +671,20 @@ function App() {
 
                         <h1>Previsão do tempo</h1>
 
-                        <p>Previsão do tempo, realizado em 2025, foi mais um dos projetos desenvolvidos na AGES. A ideia era realizar um site que
-                          mostrasse a previsão do tempo de qualquer cidade do mundo, o trabalho foi feito em grupo, me destaquei na parte do HTML e CSS do projeto.</p>
+                        <p>Previsão do tempo, realizado em 2025, foi mais um dos projetos desenvolvidos na AGES. A ideia era
+                          realizar um site que mostrasse a previsão do tempo de qualquer cidade do mundo, o trabalho foi
+                          feito em grupo, me destaquei na parte do HTML e CSS do projeto. <span>Linguagens usadas:</span></p>
 
-                        <a href="">
+                        <div className='text-projetos-container-icons'>
+
+                          <i className="devicon-html5-plain colored" title="HTML5"></i>
+                          <i className="devicon-css3-plain colored" title="CSS3"></i>
+                          <i className="devicon-javascript-plain colored" title="JavaScript"></i>
+                          <i className="devicon-github-original colored" title="GitHub"></i>
+
+                        </div>
+
+                        <a href="https://github.com/HeitorDenech/Sprint2-Ages">
 
                           <Botao texto="Ver mais" />
 
@@ -559,7 +702,11 @@ function App() {
 
           </section>
 
+          {/* -------------------FOOTER-FINAL---------------------- */}
 
+          <section className='footer-container'>
+            <p >Heitor De Albuquerque Denech - 2025</p>
+          </section>
 
 
         </section>

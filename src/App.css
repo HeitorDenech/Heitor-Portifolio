@@ -22,6 +22,24 @@
     }
   }
 
+  @keyframes pulsando {
+    0%{
+      transform: scaleX(1);
+    }
+    100%{
+      transform: scaleX(1.05);
+    }
+  }
+
+  @keyframes seta-down {
+    0%{
+      top:-1px;
+    }
+    100%{
+      top: 3px;
+    }
+  }
+
   /* ---------CONTAINER-PRINCIPAL---------- */
 
   .container-principal {
@@ -30,7 +48,7 @@
     justify-content: center;
   }
 
-  /* --------CONTAINER-NAVBAR-------------- */
+  /* ------------NAVBAR-------------- */
 
   .navbar {
     height: 100vh;
@@ -40,8 +58,11 @@
     background-color: black;
   }
 
+  .navbar a {
+    text-decoration: none;
+  }
+
   .navbar-icons {
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -58,7 +79,7 @@
     font-size: 26px;
     color: black;
     background-color: white;
-    border-radius: 50vh;
+    border-radius: 2vw;
     transition: all .55s ease-in-out;
     box-shadow: 0px 3px 12px white;
   }
@@ -87,8 +108,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     margin-top: 2vh;
-    height: 70vh;
+    height: 80vh;
     width: 98%;
     background-color: white;
     border-radius: 20px 20px 0px 0px;
@@ -114,7 +136,7 @@
 
   .texto-introducao p {
     margin-left: 20vh;
-    font-size: 26px;
+    font-size: 24px;
     width: 70%;
   }
 
@@ -135,12 +157,39 @@
   }
 
   .img-introducao img {
-    height: 80%;
-    width: 65%;
+    height: 90%;
+    width: 75%;
     position: relative;
     animation: flutuar 1.2s ease-in-out infinite alternate;
   }
 
+
+  /* ----------------SCROLL-DOWN----------------- */
+
+  .scroll-down {  
+    height: 18vh;
+    width: 98%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;  
+  }
+
+  .scroll-down p {
+    margin-top: 5vh;
+    color: black;
+    font-size: 22px;
+    letter-spacing: 1px;
+    position: relative;
+    /* animation: pulsando 1s ease-in-out infinite alternate; */
+    opacity: 70%;
+  }
+
+  .scroll-down i{
+    font-size: 18px;
+    position: relative;
+    animation: seta-down 0.7s ease-in-out infinite alternate;
+
+  }
 
   /* ---------HARD-SKILLS-CONTAINER-PRINCIPAL--------- */
 
@@ -148,7 +197,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 60vh;
+    height: 70vh;
     width: 98%;
     background-color: #272727;
   }
@@ -168,7 +217,6 @@
     width: 65%;
     box-shadow: 0px 3px 12px white;
     border-radius: 140px 40px 140px 40px;
-    position: relative;
   }
 
   /* ----------ICONS-HARD-SKILLS----------------- */
@@ -206,9 +254,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 16vh;
-    width: 11vw;
-    font-size: 80px;
+    height: 18vh;
+    width: 12vw;
+    font-size: 90px;
     color: black;
     background-color: white;
     border-radius: 20px;
@@ -285,19 +333,27 @@
     border-bottom: 1px solid rgb(187, 186, 186);
   }
 
-  .content i{
+  .content i {
     color: #E21A41;
     font-size: 30px;
   }
 
   .question {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     cursor: pointer;
+    color: #E21A41;
+    gap: 5px;
+    height: 6vh;
+    transition: all .35s ease-in-out;
+    transform: scaleX(1);
+  }
+
+  .question:hover {
     color: black;
-    gap: 10px;
-    height: 5;
+    transform: scaleX(1.01);
+    filter: none;
   }
 
   .question h3 {
@@ -305,7 +361,6 @@
     text-align: left;
     flex: 1;
     letter-spacing: normal;
-    color: #E21A41;
     margin-top: 0.5vh;
   }
 
@@ -318,6 +373,10 @@
     transform: rotate(180deg);
   }
 
+  .content.active .question h3 {
+    color: black;
+  }
+
   /* Área da resposta */
   .answer {
     overflow: hidden;
@@ -326,17 +385,7 @@
     margin-top: 15px;
     display: flex;
     flex-direction: row;
-    transition: max-height 0.5s ease-out; /* Transição suave */
   }
-
-  /* .answer p {
-    margin-top: 10px;
-    font-size: 1rem;
-    color: black;
-    text-align: start;
-    font-weight: 400;
-    letter-spacing: normal;
-  } */
 
 
   /* --------------IMG-PROJETOS-CONTAINER-------------- */
@@ -400,31 +449,6 @@
     position: relative;
   }
 
-
-  /* .navegacao-manual {
-    position: absolute;
-    width: 600px;
-    margin-top: 250px;
-    display: flex;
-    justify-content: center;
-  }
-
-  .manual-botao {
-    border: 2px solid black;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;
-  }
-
-  .manual-botao:not(:last-child) {
-    margin-right: 40px;
-  }
-
-  .manual-botao:hover {
-    background-color: black;
-  } */
-
   /* --------GEODIVERSO------------ */
 
   #radio1:checked~.first {
@@ -441,76 +465,57 @@
 
   /* ---------------SUBER-------------- */
 
-  #radio1-suber:checked ~ .first-suber {
+  #radio1-suber:checked~.first-suber {
     margin-left: 0;
   }
-  
-  #radio2-suber:checked ~ .first-suber {
+
+  #radio2-suber:checked~.first-suber {
     margin-left: -100%;
   }
-  
-  #radio3-suber:checked ~ .first-suber {
+
+  #radio3-suber:checked~.first-suber {
     margin-left: -200%;
   }
 
   /* ---------------COCA-COLA-------------- */
 
-  #radio1-coca:checked ~ .first-coca {
+  #radio1-coca:checked~.first-coca {
     margin-left: 0;
   }
-  
-  #radio2-coca:checked ~ .first-coca {
+
+  #radio2-coca:checked~.first-coca {
     margin-left: -100%;
   }
-  
-  #radio3-coca:checked ~ .first-coca {
+
+  #radio3-coca:checked~.first-coca {
     margin-left: -200%;
   }
-  
-  #radio4-coca:checked ~ .first-coca {
+
+  #radio4-coca:checked~.first-coca {
     margin-left: -300%;
   }
 
-  #radio5-coca:checked ~ .first-coca {
+  #radio5-coca:checked~.first-coca {
     margin-left: -400%;
   }
 
-  /* 
-  .navegacao-botao div {
-    border: 2px solid #22a7ff;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;
+  /* ---------------PREVISASO-DO-TEMPO------------- */
+
+  #radio1-tempo:checked~.first-tempo {
+    margin-left: 0;
   }
 
-  .navegacao-botao {
-    position: absolute;
-    width: 600px;
-    margin-top: 268px;
-    display: flex;
-    justify-content: center;
+  #radio2-tempo:checked~.first-tempo {
+    margin-left: -100%;
   }
 
-  .navegacao-botao div:not(:last-child) {
-    margin-right: 40px;
+  #radio3-tempo:checked~.first-tempo {
+    margin-left: -200%;
   }
 
-  #radio1:checked~.navegacao-botao .botao-1 {
-    background-color: white;
+  #radio4-tempo:checked~.first-tempo {
+    margin-left: -300%;
   }
-
-  #radio2:checked~.navegacao-botao .botao-2 {
-    background-color: white;
-  }
-
-  #radio3:checked~.navegacao-botao .botao-3 {
-    background-color: white;
-  }
-
-  #radio4:checked~.navegacao-botao .botao-4 {
-    background-color: white;
-  } */
 
   /* ------------------CARROSEL------------------ */
 
@@ -535,12 +540,291 @@
     color: #E21A41;
   }
 
+  .text-projetos-container span {
+    color: #E21A41;
+  }
+
   .text-projetos-container p {
     margin-left: 6vh;
-    font-size: 24px;
+    font-size: 23px;
     width: 80%;
+  }
+
+  .text-projetos-container-icons {
+    margin-left: 6vh;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 50%;
+  }
+
+  .text-projetos-container-icons i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4vh;
+    width: 3vw;
+    border-radius: 20px;
+    box-shadow: 0px 3px 12px black;
+    font-size: 25px;
+    transition: all .35s ease-in-out;
+  }
+
+  .text-projetos-container-icons i:hover {
+    background-color: #E21A41;
+    color: white;
   }
 
   .text-projetos-container button {
     margin-left: 6vh;
+  }
+
+
+
+  /* --------------FOOTER-FINAL--------------- */
+
+  .footer-container {
+    height: 8vh;
+    width: 98%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-container p {
+    color: white;
+    font-size: 20px;
+    letter-spacing: 1.25px;
+    opacity: 70%;
+  }
+
+
+
+
+  /* -----------IPHONE-12/13-PRO-MAX----------------- */
+
+  @media screen and (max-width: 428px) {
+
+    .container-principal{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+      overflow: hidden;
+    }
+
+    /* ----------------------NAVBAR------------------- */
+
+    .navbar{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 10vh;
+      width: 100%;
+      position: sticky;
+      top: 0;
+    }
+
+    .navbar-icons{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      gap: 30px;
+    }
+
+    .navbar-icons i{
+      height: 5vh;
+      width: 11vw;
+      font-size: 23px;
+      border-radius: 50%;
+    }
+
+    /* ---------------INTRODUCAO-HEITOR----------------- */
+
+    .introducao-heitor{
+      height: auto;
+    }
+
+    /* ---------------INTRODUCAO-HEITOR-TEXTO-------------- */
+
+    .texto-introducao{
+      margin-top: 2vh;
+      width: 100%;
+      justify-content: start;
+    }
+
+    .texto-introducao h1{
+      margin-left: 5vh;
+      font-size: 45px;
+    }
+
+    .texto-introducao p{
+      margin-left: 5vh;
+      width: 80%;
+      font-size: 16px;
+    }
+
+    .texto-introducao button{
+      margin-top: 0;
+      margin-bottom: 5vh;
+      margin-left: 5vh;
+      height: 4vh;
+      width: 50vw;
+      font-size: 18px;
+    }
+
+    /* ----------------INTRODUCAO-HEITOR-IMG---------------- */
+
+    .img-introducao{
+      width: 100%;
+      display: none;
+    }
+
+    .img-introducao img{
+      margin-top: 4vh;
+      height: 50%;
+      width: 35%;
+    }
+
+    /* ------------------SCROLL-DOWN------------------- */
+
+    .scroll-down{
+      display: none;
+    }
+
+    /* ------------------HARD-SKILLS----------------- */
+
+    .hard-skills-container-principal{
+      height: auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* -----------------IMG-HARD-SKILLS----------------- */
+
+    .img-hard-skills{
+      margin-top: 3vh;
+      width: 100%;
+    }
+
+    .img-hard-skills img{
+      height: 60%;
+      width: 90%;
+      border-radius: 20px;
+    }
+
+    /* ----------------ICONS-HARD-SKILLS--------------- */
+
+    .icons-hard-skills{
+      flex-direction: column;
+      width: 100%;
+    }
+
+    /* -------------ICONS-HARD-SKILLS-H1--------------- */
+
+    .icons-hard-skills-h1-celular{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .icons-hard-skills h1{
+      margin-top: 2vh;
+      font-size: 40px;
+    }
+
+    /* -------------ICONS-CONTAINER-PRINCIPAL------------- */
+
+    .icons-container-principal{
+      width: 100%;
+      margin-bottom: 4vh;
+    }
+
+    .icons-container-principal i{
+      height: 12vh;
+      width: 23vw;
+      font-size: 50px;
+    }
+
+    /* ---------------PROJETOS-------------- */
+
+    .projetos h1{
+      font-size: 40px;
+    }
+
+    /* --------------ACCORDION---------------- */
+
+    .answer{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    .img-projetos-container{
+      display: none;
+    }
+
+    /* --------------CARROSSEL------------------ */
+
+    .carrosel{
+      display: none;
+      height: 300px;
+      width: 350px;
+    }
+
+    .slides{
+      height: 300px;
+      width: 350px;
+    }
+
+    .slide img{
+      width: 350px;
+    }
+
+    /* -------------TEXT-PROJETOS-CONTAINER-------------- */
+
+    .text-projetos-container{
+      max-width: max-content;
+      width: 100%;
+    }
+
+    .text-projetos-container h1{
+      margin-left: 0;
+    }
+
+    .text-projetos-container p{
+      margin-left: 0;
+      width: 100%;
+      font-size: 20px;
+    }
+
+    .text-projetos-container-icons{
+      margin-left: 0;
+      width: 100%;
+    }
+
+    .text-projetos-container-icons i{
+      height: 5vh;
+      width: 10vw;
+      border-radius: 50%;
+    }
+
+    .text-projetos-container button{
+      margin-left: 0;
+      height: 4vh;
+      width: 50vw;
+      font-size: 18px;
+    }
+
+    /* -------------FOOTER-FINAL--------------- */
+
+    .footer-container p{
+      font-size: 16px;
+    }
   }
