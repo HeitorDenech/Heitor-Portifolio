@@ -465,25 +465,25 @@ function App() {
 
                             <div className="slide">
                               <a href="https://github.com/HeitorDenech/CocaCola-landingPage">
-                                <img src={imgCoca1} alt="imagem 1" />
+                                <img src={imgCoca2} alt="imagem 1" />
                               </a>
                             </div>
 
                             <div className="slide">
                               <a href="https://github.com/HeitorDenech/CocaCola-landingPage">
-                                <img src={imgCoca1} alt="imagem 1" />
+                                <img src={imgCoca3} alt="imagem 1" />
                               </a>
                             </div>
 
                             <div className="slide">
                               <a href="https://github.com/HeitorDenech/CocaCola-landingPage">
-                                <img src={imgCoca1} alt="imagem 1" />
+                                <img src={imgCoca4} alt="imagem 1" />
                               </a>
                             </div>
 
                             <div className="slide">
                               <a href="https://github.com/HeitorDenech/CocaCola-landingPage">
-                                <img src={imgCoca1} alt="imagem 1" />
+                                <img src={imgCoca5} alt="imagem 1" />
                               </a>
                             </div>
 
@@ -638,19 +638,19 @@ function App() {
 
                             <div className="slide">
                               <a href="https://github.com/HeitorDenech/Sprint2-Ages">
-                                <img src={imgTempo1} alt="imagem 1" />
+                                <img src={imgTempo2} alt="imagem 1" />
                               </a>
                             </div>
 
                             <div className="slide">
                               <a href="https://github.com/HeitorDenech/Sprint2-Ages">
-                                <img src={imgTempo1} alt="imagem 1" />
+                                <img src={imgTempo3} alt="imagem 1" />
                               </a>
                             </div>
 
                             <div className="slide">
                               <a href="https://github.com/HeitorDenech/Sprint2-Ages">
-                                <img src={imgTempo1} alt="imagem 1" />
+                                <img src={imgTempo4} alt="imagem 1" />
                               </a>
                             </div>
 
