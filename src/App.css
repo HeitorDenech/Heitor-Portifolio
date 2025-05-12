@@ -18,7 +18,7 @@
     }
 
     100% {
-      top: 20px;
+      top: 25px;
     }
   }
 
@@ -131,6 +131,10 @@
     margin-left: 20vh;
     font-size: 80px;
     font-weight: normal;
+    color: #E21A41;
+  }
+  
+  .texto-introducao span{
     color: #E21A41;
   }
 
@@ -248,6 +252,19 @@
     flex-wrap: wrap;
     flex-direction: row;
     gap: 20px;
+    transition: all .55s ease-in-out;
+  }
+
+  .hover-icons{
+    transition: all .40s ease-in-out;
+    border-radius: 20px;
+    transform: scaleX(0.95);
+  }
+
+  .hover-icons:hover{
+      /* border: 1px solid white; */
+      transform: scaleX(0.99);
+      box-shadow: 0px 3px 12px white;
   }
 
   .icons-container-principal i {
@@ -261,7 +278,7 @@
     background-color: white;
     border-radius: 20px;
     transition: all .55s ease-in-out;
-    box-shadow: 0px 3px 12px white;
+    box-shadow: 0px 2px 7px white;
   }
 
   .icons-container-principal i:hover {

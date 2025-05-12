@@ -134,16 +134,16 @@ function App() {
         <section className='navbar'>
 
           <div className='navbar-icons'>
-            <a href="https://www.instagram.com/heitorx.denech/?next=%2F">
+            <a href="https://www.instagram.com/heitorx.denech/?next=%2F" target='_blank'>
               <i className="bi bi-instagram"></i>
             </a>
-            <a href="https://github.com/HeitorDenech">
+            <a href="https://github.com/HeitorDenech" target='_blank'>
               <i className="bi bi-github"></i>
             </a>
-            <a href="https://www.linkedin.com/in/heitor-de-albuquerque-denech-5a4669239/">
+            <a href="https://www.linkedin.com/in/heitor-de-albuquerque-denech-5a4669239/" target='_blank'>
               <i className="bi bi-linkedin"></i>
             </a>
-            <a href="https://api.whatsapp.com/send?phone=5551996994595">
+            <a href="https://api.whatsapp.com/send?phone=5551996994595" target='_blank'>
               <i className="bi bi-whatsapp"></i>
             </a>
           </div>
@@ -165,10 +165,9 @@ function App() {
               </h1>
 
               <p data-aos="fade-right" data-aos-once="true">
-                Tenho 18 anos, comecei a programar em 2022, no Senac São Leopoldo. No início das aulas, era só python e aulas de
-                lógica, mas após alguns meses de aula, foi introduzido o HTML, CSS e JS, e acabei me apegando muito a esses
-                conhecimentos e ao desing web, utilizando ferramentas como o Figma. Sou dedicado,
-                comunicativo e sempre busco aprender mais.
+                Tenho 18 anos, comecei a programar desde 2022, no Senac São Leopoldo. Sou um desenvolvedor <span>Front-End</span>, utilizo ferramentas
+                como Figma e Bootstrap para me ajudar no desing dos meus projetos. Sou dedicado,
+                comunicativo, gosto de trabalhos em grupos e sempre busco aprender mais.
               </p>
 
               <div data-aos="fade-right" data-aos-once="true">
@@ -214,13 +213,29 @@ function App() {
 
               <div className='icons-container-principal'>
 
+                <div className='hover-icons'>
+                  <i data-aos="fade-up" data-aos-once="true" className="devicon-html5-plain colored" title="HTML5"></i>
+                </div>
 
-                <i data-aos="fade-up" data-aos-once="true" className="devicon-html5-plain colored" title="HTML5"></i>
-                <i data-aos="fade-up" data-aos-once="true" className="devicon-css3-plain colored" title="CSS3"></i>
-                <i data-aos="fade-up" data-aos-once="true" className="devicon-javascript-plain colored" title="JavaScript"></i>
-                <i data-aos="fade-up" data-aos-once="true" className="devicon-figma-plain colored" title="Figma"></i>
-                <i data-aos="fade-up" data-aos-once="true" className="devicon-github-original colored" title="GitHub"></i>
-                <i data-aos="fade-up" data-aos-once="true" className="devicon-typescript-plain colored" title="TypeScript"></i>
+                <div className='hover-icons'>
+                  <i data-aos="fade-up" data-aos-once="true" className="devicon-css3-plain colored" title="CSS3"></i>
+                </div>
+
+                <div className='hover-icons'>
+                  <i data-aos="fade-up" data-aos-once="true" className="devicon-javascript-plain colored" title="JavaScript"></i>
+                </div>
+
+                <div className='hover-icons'>
+                  <i data-aos="fade-up" data-aos-once="true" className="devicon-figma-plain colored" title="Figma"></i>
+                </div>
+
+                <div className='hover-icons'>
+                  <i data-aos="fade-up" data-aos-once="true" className="devicon-github-original colored" title="GitHub"></i>
+                </div>
+
+                <div className='hover-icons'>
+                  <i data-aos="fade-up" data-aos-once="true" className="devicon-typescript-plain colored" title="TypeScript"></i>
+                </div>
 
               </div>
 
@@ -272,19 +287,19 @@ function App() {
                             <input type="radio" name="radio-botao" id="radio3" />
 
                             <div className="slide first">
-                              <a href="https://github.com/HeitorDenech/Geodiverso-2024">
+                              <a href="https://github.com/HeitorDenech/Geodiverso-2024" target='_blank'>
                                 <img src={imgGeodiverso1} alt="imagem 1" />
                               </a>
                             </div>
 
                             <div className="slide">
-                              <a href="https://github.com/HeitorDenech/Geodiverso-2024">
+                              <a href="https://github.com/HeitorDenech/Geodiverso-2024" target='_blank'>
                                 <img src={imgGeodiverso2} alt="imagem 1" />
                               </a>
                             </div>
 
                             <div className="slide">
-                              <a href="https://github.com/HeitorDenech/Geodiverso-2024">
+                              <a href="https://github.com/HeitorDenech/Geodiverso-2024" target='_blank'>
                                 <img src={imgGeodiverso3} alt="imagem 1" />
                               </a>
                             </div>
@@ -323,7 +338,7 @@ function App() {
 
                         </div>
 
-                        <a href="https://github.com/HeitorDenech/Geodiverso-2024">
+                        <a href="https://github.com/HeitorDenech/Geodiverso-2024" target='_blank'>
 
                           <Botao texto="Ver mais" />
 
@@ -365,19 +380,19 @@ function App() {
                             <input type="radio" name="radio-botao-suber" id="radio3-suber" />
 
                             <div className="slide first-suber">
-                              <a href="https://github.com/HeitorDenech/ApiSuber">
+                              <a href="https://github.com/HeitorDenech/ApiSuber" target='_blank'>
                                 <img src={imgSuber1} alt="imagem 1" />
                               </a>
                             </div>
 
                             <div className="slide">
-                              <a href="https://github.com/HeitorDenech/ApiSuber">
+                              <a href="https://github.com/HeitorDenech/ApiSuber" target='_blank'>
                                 <img src={imgSuber2} alt="imagem 1" />
                               </a>
                             </div>
 
                             <div className="slide">
-                              <a href="https://github.com/HeitorDenech/ApiSuber">
+                              <a href="https://github.com/HeitorDenech/ApiSuber" target='_blank'>
                                 <img src={imgSuber3} alt="imagem 1" />
                               </a>
                             </div>
@@ -415,7 +430,7 @@ function App() {
 
                         </div>
 
-                        <a href="https://github.com/HeitorDenech/ApiSuber">
+                        <a href="https://github.com/HeitorDenech/ApiSuber" target='_blank'>
 
                           <Botao texto="Ver mais" />
 
@@ -458,31 +473,31 @@ function App() {
                             <input type="radio" name="radio-botao-coca" id="radio5-coca" />
 
                             <div className="slide first-coca">
-                              <a href="https://github.com/HeitorDenech/CocaCola-landingPage">
+                              <a href="https://github.com/HeitorDenech/CocaCola-landingPage" target='_blank'>
                                 <img src={imgCoca1} alt="imagem 1" />
                               </a>
                             </div>
 
                             <div className="slide">
-                              <a href="https://github.com/HeitorDenech/CocaCola-landingPage">
+                              <a href="https://github.com/HeitorDenech/CocaCola-landingPage" target='_blank'>
                                 <img src={imgCoca2} alt="imagem 1" />
                               </a>
                             </div>
 
                             <div className="slide">
-                              <a href="https://github.com/HeitorDenech/CocaCola-landingPage">
+                              <a href="https://github.com/HeitorDenech/CocaCola-landingPage" target='_blank'>
                                 <img src={imgCoca3} alt="imagem 1" />
                               </a>
                             </div>
 
                             <div className="slide">
-                              <a href="https://github.com/HeitorDenech/CocaCola-landingPage">
+                              <a href="https://github.com/HeitorDenech/CocaCola-landingPage" target='_blank'>
                                 <img src={imgCoca4} alt="imagem 1" />
                               </a>
                             </div>
 
                             <div className="slide">
-                              <a href="https://github.com/HeitorDenech/CocaCola-landingPage">
+                              <a href="https://github.com/HeitorDenech/CocaCola-landingPage" target='_blank'>
                                 <img src={imgCoca5} alt="imagem 1" />
                               </a>
                             </div>
@@ -517,7 +532,7 @@ function App() {
 
                         </div>
 
-                        <a href="https://github.com/HeitorDenech/CocaCola-landingPage">
+                        <a href="https://github.com/HeitorDenech/CocaCola-landingPage" target='_blank'>
 
                           <Botao texto="Ver mais" />
 
@@ -556,7 +571,7 @@ function App() {
                             <input type="radio" name="radio-botao-calculadora" id="radio1-calculadora" />
 
                             <div className="slide first-calculadora">
-                              <a href="https://github.com/HeitorDenech/CalculadoraAges">
+                              <a href="https://github.com/HeitorDenech/CalculadoraAges" target='_blank'>
                                 <img src={imgCalculadora} alt="imagem 1" />
                               </a>
                             </div>
@@ -588,7 +603,7 @@ function App() {
 
                         </div>
 
-                        <a href="https://github.com/HeitorDenech/CalculadoraAges">
+                        <a href="https://github.com/HeitorDenech/CalculadoraAges" target='_blank'>
 
                           <Botao texto="Ver mais" />
 
@@ -631,25 +646,25 @@ function App() {
 
 
                             <div className="slide first-tempo">
-                              <a href="https://github.com/HeitorDenech/Sprint2-Ages">
+                              <a href="https://github.com/HeitorDenech/Sprint2-Ages" target='_blank'>
                                 <img src={imgTempo1} alt="imagem 1" />
                               </a>
                             </div>
 
                             <div className="slide">
-                              <a href="https://github.com/HeitorDenech/Sprint2-Ages">
+                              <a href="https://github.com/HeitorDenech/Sprint2-Ages" target='_blank'>
                                 <img src={imgTempo2} alt="imagem 1" />
                               </a>
                             </div>
 
                             <div className="slide">
-                              <a href="https://github.com/HeitorDenech/Sprint2-Ages">
+                              <a href="https://github.com/HeitorDenech/Sprint2-Ages" target='_blank'>
                                 <img src={imgTempo3} alt="imagem 1" />
                               </a>
                             </div>
 
                             <div className="slide">
-                              <a href="https://github.com/HeitorDenech/Sprint2-Ages">
+                              <a href="https://github.com/HeitorDenech/Sprint2-Ages" target='_blank'>
                                 <img src={imgTempo4} alt="imagem 1" />
                               </a>
                             </div>
@@ -684,7 +699,7 @@ function App() {
 
                         </div>
 
-                        <a href="https://github.com/HeitorDenech/Sprint2-Ages">
+                        <a href="https://github.com/HeitorDenech/Sprint2-Ages" target='_blank'>
 
                           <Botao texto="Ver mais" />
 
