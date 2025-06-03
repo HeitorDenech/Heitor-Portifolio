@@ -256,14 +256,14 @@
   }
 
   .hover-icons{
-    transition: all .40s ease-in-out;
+    transition: all .30s ease-in-out;
     border-radius: 20px;
-    transform: scaleX(0.95);
+    transform: scaleY(0.95);
   }
 
   .hover-icons:hover{
       /* border: 1px solid white; */
-      transform: scaleX(0.99);
+      transform: scaleY(0.99);
       box-shadow: 0px 3px 12px white;
   }
 

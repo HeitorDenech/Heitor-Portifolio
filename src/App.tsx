@@ -323,7 +323,7 @@ function App() {
                         <h1>Geodiverso</h1>
 
                         <p>Geodiverso é um site voltado a ensinar os conteúdos de Geografia do Ensino Médio,
-                          desenvolvido em 2024 no Senac RS. <span>Linguagens usadas:</span></p>
+                          desenvolvido em 2024 no Senac RS. <span>Tecnologias usadas:</span></p>
 
                         <div className='text-projetos-container-icons'>
 
@@ -415,7 +415,7 @@ function App() {
 
                         <p>Suber é um site desenvolvido em dupla, no SENAC, em 2024, eu fiz a parte para notebook, e
                           minha dupla para celular. O objetivo do projeto era fazer uma landing page, com um dos
-                          temas que tinham de opção, no nosso caso foi o suber. <span>Linguagens usadas:</span></p>
+                          temas que tinham de opção, no nosso caso foi o suber. <span>Tecnologias usadas:</span></p>
 
                         <div className='text-projetos-container-icons'>
 
@@ -522,7 +522,7 @@ function App() {
 
                         <p>Foi um site que eu fiz apenas para testar minhas habilidades de CC adquiridas, me inspirei no site da Coca-Cola, a ideia era
                           fazer o mais parecido com o site original sem inspecionar a página, ou seja, apenas com o conhecimento que eu já possuo.
-                          O site foi desenvolvido em 2025. <span>Linguagens usadas:</span></p>
+                          O site foi desenvolvido em 2025. <span>Tecnologias usadas:</span></p>
 
                         <div className='text-projetos-container-icons'>
 
@@ -593,7 +593,7 @@ function App() {
                         <h1>Calculadora</h1>
 
                         <p>Nesse projeto eu fiz uma calculadora simples, usando HTML, CSS e JS. A calculadora foi
-                          desenvolvida em 2025, na AGES. <span>Linguagens usadas:</span></p>
+                          desenvolvida em 2025, na AGES. <span>Tecnologias usadas:</span></p>
 
                         <div className='text-projetos-container-icons'>
 
@@ -688,7 +688,7 @@ function App() {
 
                         <p>Previsão do tempo, realizado em 2025, foi mais um dos projetos desenvolvidos na AGES. A ideia era
                           realizar um site que mostrasse a previsão do tempo de qualquer cidade do mundo, o trabalho foi
-                          feito em grupo, me destaquei na parte do HTML e CSS do projeto. <span>Linguagens usadas:</span></p>
+                          feito em grupo, me destaquei na parte do HTML e CSS do projeto. <span>Tecnologias usadas:</span></p>
 
                         <div className='text-projetos-container-icons'>
 
