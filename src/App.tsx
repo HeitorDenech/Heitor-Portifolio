@@ -414,7 +414,7 @@ function App() {
                         <h1>Suber</h1>
 
                         <p>Suber é um site desenvolvido em dupla, no SENAC, em 2024, eu fiz a parte para notebook, e
-                          minha dupla para celular. O objetivo do projeto era fazer uma landing page, com um dos
+                          minha dupla para celular, pois o projeto tinha que ser responsivo. O objetivo do projeto era fazer uma landing page, com um dos
                           temas que tinham de opção, no nosso caso foi o suber. <span>Tecnologias usadas:</span></p>
 
                         <div className='text-projetos-container-icons'>
