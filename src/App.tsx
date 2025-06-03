@@ -8,7 +8,7 @@ import { useEffect } from 'react';
 // ------------------IMAGENS----------------------
 import imgHardSkills from './assets/imgHardSkills.png';
 
-import imgIntroducaoProgramador from './assets/imgIntroducaoProgramador.avif';
+import fotoPerfil from "./assets/FotoPerfil.jpg";
 
 import imgGeodiverso1 from './assets/imgGeodiverso1.jpg';
 import imgGeodiverso2 from './assets/imgGeodiverso2.jpg';
@@ -179,7 +179,7 @@ function App() {
 
             <div className='img-introducao' data-aos="fade-left" data-aos-once="true">
 
-              <img src={imgIntroducaoProgramador} alt="imagemIntroducaoHeitor" srcSet="" />
+              <img src={fotoPerfil} alt="imagemIntroducaoHeitor" srcSet="" />
 
             </div>
 
