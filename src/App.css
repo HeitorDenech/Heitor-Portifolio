@@ -161,10 +161,12 @@
   }
 
   .img-introducao img {
-    height: 90%;
-    width: 75%;
+    height: 60%;
+    width: 50%;
     position: relative;
-    animation: flutuar 1.2s ease-in-out infinite alternate;
+    animation: flutuar 1.5s ease-in-out infinite alternate;
+    border-radius: 50%;
+    box-shadow: 3px 4px 12px black;
   }
 
 

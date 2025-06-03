@@ -8,7 +8,7 @@ import { useEffect } from 'react';
 // ------------------IMAGENS----------------------
 import imgHardSkills from './assets/imgHardSkills.png';
 
-import fotoPerfil from "./assets/FotoPerfil.jpg";
+import fotoPerfil2 from "./assets/fotoPerfil2.png";
 
 import imgGeodiverso1 from './assets/imgGeodiverso1.jpg';
 import imgGeodiverso2 from './assets/imgGeodiverso2.jpg';
@@ -179,7 +179,7 @@ function App() {
 
             <div className='img-introducao' data-aos="fade-left" data-aos-once="true">
 
-              <img src={fotoPerfil} alt="imagemIntroducaoHeitor" srcSet="" />
+              <img src={fotoPerfil2} alt="imagemIntroducaoHeitor" srcSet="" />
 
             </div>
 
@@ -231,7 +231,7 @@ function App() {
                 </div>
 
                 <div className='hover-icons'>
-                  <i data-aos="fade-up" data-aos-once="true" className="devicon-typescript-plain colored" title="TypeScript"></i>
+                  <i data-aos="fade-up" data-aos-once="true" className="devicon-react-original colored" title="React"></i>
                 </div>
 
               </div>
