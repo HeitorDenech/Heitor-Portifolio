@@ -14,19 +14,16 @@ import imgGeodiverso1 from './assets/imgGeodiverso1.jpg';
 import imgGeodiverso2 from './assets/imgGeodiverso2.jpg';
 import imgGeodiverso3 from './assets/imgGeodiverso3.jpg';
 
-import suberLogo from './assets/suberLogo.png';
 import imgSuber1 from './assets/imgSuber1.jpg';
 import imgSuber2 from './assets/imgSuber2.jpg';
 import imgSuber3 from './assets/imgSuber3.jpg';
 
-import cocaLogo from './assets/cocaLogo.svg';
 import imgCoca1 from './assets/imgCoca1.jpg';
 import imgCoca2 from './assets/imgCoca2.jpg';
 import imgCoca3 from './assets/imgCoca3.jpg';
 import imgCoca4 from './assets/imgCoca4.jpg';
 import imgCoca5 from './assets/imgCoca5.jpg';
 
-import calculadoraLogo from './assets/calculadoraLogo.jpg';
 import imgCalculadora from './assets/imgCalculadora.jpg';
 
 import imgTempo1 from './assets/imgTempo1.jpg';
