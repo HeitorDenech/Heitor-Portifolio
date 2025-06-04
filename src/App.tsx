@@ -205,7 +205,7 @@ function App() {
             <div className='icons-hard-skills' data-aos="fade-up" data-aos-once="true">
 
               <div className='icons-hard-skills-h1-celular'>
-                <h1>Hard Skills</h1>
+                <h1>Tecnologias</h1>
               </div>
 
               <div className='icons-container-principal'>
