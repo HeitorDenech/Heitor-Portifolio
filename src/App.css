@@ -23,19 +23,21 @@
   }
 
   @keyframes pulsando {
-    0%{
+    0% {
       transform: scaleX(1);
     }
-    100%{
+
+    100% {
       transform: scaleX(1.05);
     }
   }
 
   @keyframes seta-down {
-    0%{
-      top:-1px;
+    0% {
+      top: -1px;
     }
-    100%{
+
+    100% {
       top: 3px;
     }
   }
@@ -98,7 +100,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 100vw;
+    width: vw;
     background-color: #3B3B3B;
   }
 
@@ -133,8 +135,8 @@
     font-weight: normal;
     color: #E21A41;
   }
-  
-  .texto-introducao span{
+
+  .texto-introducao span {
     color: #E21A41;
   }
 
@@ -172,12 +174,12 @@
 
   /* ----------------SCROLL-DOWN----------------- */
 
-  .scroll-down {  
+  .scroll-down {
     height: 18vh;
     width: 98%;
     background-color: rgb(255, 255, 255);
     display: flex;
-    justify-content: center;  
+    justify-content: center;
   }
 
   .scroll-down p {
@@ -190,7 +192,7 @@
     opacity: 70%;
   }
 
-  .scroll-down i{
+  .scroll-down i {
     font-size: 18px;
     position: relative;
     animation: seta-down 0.7s ease-in-out infinite alternate;
@@ -257,16 +259,16 @@
     transition: all .55s ease-in-out;
   }
 
-  .hover-icons{
+  .hover-icons {
     transition: all .30s ease-in-out;
     border-radius: 20px;
     transform: scaleY(0.95);
   }
 
-  .hover-icons:hover{
-      /* border: 1px solid white; */
-      transform: scaleY(0.99);
-      box-shadow: 0px 3px 12px white;
+  .hover-icons:hover {
+    /* border: 1px solid white; */
+    transform: scaleY(0.99);
+    box-shadow: 0px 3px 12px white;
   }
 
   .icons-container-principal i {
@@ -625,7 +627,7 @@
 
   @media screen and (max-width: 428px) {
 
-    .container-principal{
+    .container-principal {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -635,7 +637,7 @@
 
     /* ----------------------NAVBAR------------------- */
 
-    .navbar{
+    .navbar {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -645,7 +647,7 @@
       top: 0;
     }
 
-    .navbar-icons{
+    .navbar-icons {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -653,7 +655,7 @@
       gap: 30px;
     }
 
-    .navbar-icons i{
+    .navbar-icons i {
       height: 5vh;
       width: 11vw;
       font-size: 23px;
@@ -662,30 +664,30 @@
 
     /* ---------------INTRODUCAO-HEITOR----------------- */
 
-    .introducao-heitor{
+    .introducao-heitor {
       height: auto;
     }
 
     /* ---------------INTRODUCAO-HEITOR-TEXTO-------------- */
 
-    .texto-introducao{
+    .texto-introducao {
       margin-top: 2vh;
       width: 100%;
       justify-content: start;
     }
 
-    .texto-introducao h1{
+    .texto-introducao h1 {
       margin-left: 5vh;
       font-size: 45px;
     }
 
-    .texto-introducao p{
+    .texto-introducao p {
       margin-left: 5vh;
       width: 80%;
       font-size: 16px;
     }
 
-    .texto-introducao button{
+    .texto-introducao button {
       margin-top: 0;
       margin-bottom: 5vh;
       margin-left: 5vh;
@@ -696,12 +698,12 @@
 
     /* ----------------INTRODUCAO-HEITOR-IMG---------------- */
 
-    .img-introducao{
+    .img-introducao {
       width: 100%;
       display: none;
     }
 
-    .img-introducao img{
+    .img-introducao img {
       margin-top: 4vh;
       height: 50%;
       width: 35%;
@@ -709,13 +711,13 @@
 
     /* ------------------SCROLL-DOWN------------------- */
 
-    .scroll-down{
+    .scroll-down {
       display: none;
     }
 
     /* ------------------HARD-SKILLS----------------- */
 
-    .hard-skills-container-principal{
+    .hard-skills-container-principal {
       height: auto;
       display: flex;
       flex-direction: column;
@@ -723,12 +725,12 @@
 
     /* -----------------IMG-HARD-SKILLS----------------- */
 
-    .img-hard-skills{
+    .img-hard-skills {
       margin-top: 3vh;
       width: 100%;
     }
 
-    .img-hard-skills img{
+    .img-hard-skills img {
       height: 60%;
       width: 90%;
       border-radius: 20px;
@@ -736,33 +738,34 @@
 
     /* ----------------ICONS-HARD-SKILLS--------------- */
 
-    .icons-hard-skills{
+    .icons-hard-skills {
       flex-direction: column;
       width: 100%;
     }
 
     /* -------------ICONS-HARD-SKILLS-H1--------------- */
 
-    .icons-hard-skills-h1-celular{
+    .icons-hard-skills-h1-celular {
       display: flex;
       align-items: center;
       justify-content: center;
       width: 100%;
     }
 
-    .icons-hard-skills h1{
+    .icons-hard-skills h1 {
       margin-top: 2vh;
       font-size: 40px;
     }
 
     /* -------------ICONS-CONTAINER-PRINCIPAL------------- */
 
-    .icons-container-principal{
+    .icons-container-principal {
       width: 100%;
       margin-bottom: 4vh;
+      gap: 20px;
     }
 
-    .icons-container-principal i{
+    .icons-container-principal i {
       height: 12vh;
       width: 23vw;
       font-size: 50px;
@@ -770,13 +773,13 @@
 
     /* ---------------PROJETOS-------------- */
 
-    .projetos h1{
+    .projetos h1 {
       font-size: 40px;
     }
 
     /* --------------ACCORDION---------------- */
 
-    .answer{
+    .answer {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -785,56 +788,57 @@
       width: 100%;
     }
 
-    .img-projetos-container{
+    .img-projetos-container {
       display: none;
     }
 
     /* --------------CARROSSEL------------------ */
 
-    .carrosel{
+    .carrosel {
       display: none;
       height: 300px;
       width: 350px;
     }
 
-    .slides{
+    .slides {
       height: 300px;
       width: 350px;
     }
 
-    .slide img{
+    .slide img {
       width: 350px;
     }
 
     /* -------------TEXT-PROJETOS-CONTAINER-------------- */
 
-    .text-projetos-container{
+    .text-projetos-container {
       max-width: max-content;
       width: 100%;
     }
 
-    .text-projetos-container h1{
+    .text-projetos-container h1 {
       margin-left: 0;
     }
 
-    .text-projetos-container p{
+    .text-projetos-container p {
       margin-left: 0;
       width: 100%;
       font-size: 20px;
     }
 
-    .text-projetos-container-icons{
+    .text-projetos-container-icons {
       margin-left: 0;
       width: 100%;
     }
 
-    .text-projetos-container-icons i{
+    .text-projetos-container-icons i {
       height: 5vh;
       width: 10vw;
       border-radius: 50%;
+      font-size: 20px;
     }
 
-    .text-projetos-container button{
+    .text-projetos-container button {
       margin-left: 0;
       height: 4vh;
       width: 50vw;
@@ -843,7 +847,167 @@
 
     /* -------------FOOTER-FINAL--------------- */
 
-    .footer-container p{
+    .footer-container p {
       font-size: 16px;
     }
   }
+
+
+  @media screen and (min-width: 429px) and (max-width: 820px) {
+    body {
+      overflow-x: hidden;
+    }
+
+    /* -----------NAVBAR------------- */
+
+    .navbar {
+      width: 10vw;
+    }
+
+    .navbar-icons i {
+      height: 4vh;
+      width: 5vw;
+      border-radius: 50px;
+    }
+
+    /* ----------CONTAINER-MAIN-------------- */
+
+    .container-main {
+      width: 90vw;
+    }
+
+    /* ------------INTRODUCAO-HEITOR--------- */
+
+    .introducao-heitor{
+      flex-direction: column;
+    }
+
+    /* ---------INTRODUCAO-HEITOR-TEXTO---------- */
+
+    .texto-introducao {
+      align-items: start;
+      justify-content: center;
+      height: 50%;
+      width: 100%;
+    }
+
+    .texto-introducao h1 {
+      margin-top: 3vh;
+      margin-left: 5vh;
+      font-size: 70px;
+      width: 100%;
+    }
+
+    .texto-introducao p {
+      margin-left: 5vh;
+      font-size: 24px;
+      width: 90%;
+    }
+
+    .texto-introducao button{
+      margin-left: 5vh;
+      width: 35vw;
+    }
+
+    /* ------------INTRODUCAO-HEITOR-IMG--------- */
+
+    .img-introducao{
+      width: 100%;
+      height: 50%;
+    }
+
+    .img-introducao img{
+      height: 80%;
+      width: 50%;
+    }
+
+    /* ---------HARD-SKILLS-CONTAINER-PRINCIPAL--------- */
+
+    .hard-skills-container-principal{
+      flex-direction: column;
+      height: 80vh;
+    }
+
+    /* -----------IMG-HARD-SKILLS------------------ */
+
+    .img-hard-skills{
+      height: 50%;
+      width: 100%;
+    }
+
+    .img-hard-skills img{
+      height: 80%;
+      width: 80%;
+      border-radius: 20px;
+    }
+
+    /* ----------ICONS-HARD-SKILLS----------------- */
+
+    .icons-hard-skills{
+      height: 50%;
+      width: 100%;
+      justify-content: start;
+    }
+
+    /* -------ICONS-HARD-SKILLS-H1------------------- */
+
+    .icons-hard-skills h1{
+      font-size: 60px;
+    }
+
+    /* ----------ICONS-CONTAINER-PRINCIPAL--------------- */
+
+    .icons-container-principal{
+      gap: 30px;
+    }
+
+    .icons-container-principal i{
+      width: 20vw;
+      height: 12vh;
+    }
+
+    /* ---------------ACCORDION---------------------- */
+
+    .answer{
+      display: flex;
+      align-items: start;
+      justify-content: start;
+      margin-left: -60vh;
+    }
+
+    /* -----------------CARROSSEL------------------ */
+
+    .carrosel{
+      display: none;
+    }
+
+    /* --------------TEXT-PROJETOS-CONTAINER---------------- */
+
+    .text-projetos-container h1{
+      margin-top: -2vh;
+    }
+
+    .text-projetos-container p{
+      	font-size: 24px;
+        width: 90%;
+    }
+
+    .text-projetos-container-icons{
+      width: 80%;
+    }
+
+    .text-projetos-container i{
+      width: 6vw;
+    }
+
+    .text-projetos-container button{
+      width: 35vw;
+      height: 5vh;
+    }
+  
+  }
+
+/* Notebook pequeno (até 1366px) */
+@media screen and (max-width: 1366px) {
+  
+}
