@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
   }
 
   html {
@@ -643,8 +644,6 @@
       justify-content: center;
       height: 10vh;
       width: 100%;
-      position: sticky;
-      top: 0;
     }
 
     .navbar-icons {
@@ -852,6 +851,7 @@
     }
   }
 
+  /* -------IPAD-AIR-------------- */
 
   @media screen and (min-width: 429px) and (max-width: 820px) {
     body {
@@ -878,7 +878,7 @@
 
     /* ------------INTRODUCAO-HEITOR--------- */
 
-    .introducao-heitor{
+    .introducao-heitor {
       flex-direction: column;
     }
 
@@ -904,38 +904,46 @@
       width: 90%;
     }
 
-    .texto-introducao button{
+    .texto-introducao button {
       margin-left: 5vh;
       width: 35vw;
     }
 
     /* ------------INTRODUCAO-HEITOR-IMG--------- */
 
-    .img-introducao{
+    .img-introducao {
+      align-items: start;
       width: 100%;
       height: 50%;
     }
 
-    .img-introducao img{
+    .img-introducao img {
+      margin-top: 3vh;
       height: 80%;
       width: 50%;
     }
 
+    /* -----------SCROLL-DOWN------------- */
+
+    .scroll-down{
+      display: none;
+    }
+
     /* ---------HARD-SKILLS-CONTAINER-PRINCIPAL--------- */
 
-    .hard-skills-container-principal{
+    .hard-skills-container-principal {
       flex-direction: column;
       height: 80vh;
     }
 
     /* -----------IMG-HARD-SKILLS------------------ */
 
-    .img-hard-skills{
+    .img-hard-skills {
       height: 50%;
       width: 100%;
     }
 
-    .img-hard-skills img{
+    .img-hard-skills img {
       height: 80%;
       width: 80%;
       border-radius: 20px;
@@ -943,7 +951,7 @@
 
     /* ----------ICONS-HARD-SKILLS----------------- */
 
-    .icons-hard-skills{
+    .icons-hard-skills {
       height: 50%;
       width: 100%;
       justify-content: start;
@@ -951,24 +959,24 @@
 
     /* -------ICONS-HARD-SKILLS-H1------------------- */
 
-    .icons-hard-skills h1{
+    .icons-hard-skills h1 {
       font-size: 60px;
     }
 
     /* ----------ICONS-CONTAINER-PRINCIPAL--------------- */
 
-    .icons-container-principal{
+    .icons-container-principal {
       gap: 30px;
     }
 
-    .icons-container-principal i{
+    .icons-container-principal i {
       width: 20vw;
       height: 12vh;
     }
 
     /* ---------------ACCORDION---------------------- */
 
-    .answer{
+    .answer {
       display: flex;
       align-items: start;
       justify-content: start;
@@ -977,37 +985,95 @@
 
     /* -----------------CARROSSEL------------------ */
 
-    .carrosel{
+    .carrosel {
       display: none;
     }
 
     /* --------------TEXT-PROJETOS-CONTAINER---------------- */
 
-    .text-projetos-container h1{
+    .text-projetos-container h1 {
       margin-top: -2vh;
     }
 
-    .text-projetos-container p{
-      	font-size: 24px;
-        width: 90%;
+    .text-projetos-container p {
+      font-size: 24px;
+      width: 90%;
     }
 
-    .text-projetos-container-icons{
+    .text-projetos-container-icons {
       width: 80%;
     }
 
-    .text-projetos-container i{
+    .text-projetos-container i {
       width: 6vw;
     }
 
-    .text-projetos-container button{
+    .text-projetos-container button {
       width: 35vw;
       height: 5vh;
     }
-  
+
   }
 
-/* Notebook pequeno (até 1366px) */
-@media screen and (max-width: 1366px) {
-  
-}
+  /* Notebook pequeno */
+  @media screen and (min-width: 1300px) and (max-width: 1366px){
+
+    /* ----------------------NAVBAR------------------- */
+
+    .navbar-icons{
+      gap: 25px;
+    }
+
+    .navbar-icons i {
+      height: 5vh;
+      width: 3vw;
+      font-size: 22px;
+    }
+
+    /* ---------------INTRODUCAO-HEITOR-TEXTO-------------- */
+
+    .texto-introducao h1 {
+      font-size: 60px;
+      width: 100%;
+    }
+
+    .texto-introducao p {
+      font-size: 22px;
+    }
+
+    .texto-introducao button {
+      height: 6vh;
+    }
+
+    /* ------------INTRODUCAO-HEITOR-IMG--------- */
+
+    .img-introducao img {
+      width: 60%;
+    }
+
+    /* -----------------CARROSSEL------------------ */
+
+    .carrosel {
+      width: 600px;
+      height: 400px;
+    }
+
+    /* --------------TEXT-PROJETOS-CONTAINER---------------- */
+
+    .text-projetos-container h1 {
+      font-size: 50px;
+    }
+
+    .text-projetos-container p {
+      font-size: 22px;
+    }
+
+    .text-projetos-container-icons {
+      width: 100%;
+    }
+
+    .text-projetos-container button {
+      height: 5.5vh;
+      width: 18vw;
+    }
+  }
