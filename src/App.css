@@ -59,6 +59,9 @@
     position: sticky;
     top: 0;
     background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .navbar a {
@@ -626,7 +629,7 @@
 
   /* -----------IPHONE-12/13-PRO-MAX----------------- */
 
-  @media screen and (max-width: 428px) {
+  @media screen and (max-width: 430px) {
 
     .container-principal {
       display: flex;
@@ -853,7 +856,7 @@
 
   /* -------IPAD-AIR-------------- */
 
-  @media screen and (min-width: 429px) and (max-width: 820px) {
+  @media screen and (min-width: 431px) and (max-width: 820px) {
     body {
       overflow-x: hidden;
     }
@@ -925,7 +928,7 @@
 
     /* -----------SCROLL-DOWN------------- */
 
-    .scroll-down{
+    .scroll-down {
       display: none;
     }
 
@@ -1016,11 +1019,17 @@
   }
 
   /* Notebook pequeno */
-  @media screen and (min-width: 1300px) and (max-width: 1366px){
+  @media screen and (min-width: 1300px) and (max-width: 1366px) {
 
     /* ----------------------NAVBAR------------------- */
 
-    .navbar-icons{
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .navbar-icons {
       gap: 25px;
     }
 
@@ -1048,7 +1057,14 @@
     /* ------------INTRODUCAO-HEITOR-IMG--------- */
 
     .img-introducao img {
+      height: 60%;
       width: 60%;
+    }
+
+    /* ----------ICONS-CONTAINER-PRINCIPAL--------------- */
+
+    .icons-container-principal i {
+      font-size: 5.5rem;
     }
 
     /* -----------------CARROSSEL------------------ */
@@ -1058,6 +1074,15 @@
       height: 400px;
     }
 
+    .slides {
+      width: 600px;
+      height: 400px;
+    }
+
+    .slide img {
+      width: 600px;
+    }
+
     /* --------------TEXT-PROJETOS-CONTAINER---------------- */
 
     .text-projetos-container h1 {
@@ -1065,7 +1090,7 @@
     }
 
     .text-projetos-container p {
-      font-size: 22px;
+      font-size: 20px;
     }
 
     .text-projetos-container-icons {
